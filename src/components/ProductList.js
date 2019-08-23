@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCard from './ProductCard'
+import ProductFilterBar from './ProductFilterBar'
 
 const ProductList = (props) => (
 	(props.products) ?
