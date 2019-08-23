@@ -79,7 +79,6 @@ const getVisibleHairstyles = (hairstyles, lengthFilter, typeFilter) => {
 
 
 const mapStateToProps = (state) => {
-	console.log(getVisibleProducts(state.requestPosts.products, state.ProductHoldFilter, state.ProductShineFilter))
 	return {
   	products: getVisibleProducts(state.requestPosts.products, state.ProductHoldFilter, state.ProductShineFilter),
   	hairstyles: getVisibleHairstyles(state.requestPosts.hairstyles, state.HairLengthFilter, state.HairTypeFilter),

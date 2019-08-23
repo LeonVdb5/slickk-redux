@@ -1,0 +1,96 @@
+.card {
+	width: 350px;
+	height: 350px;
+	border: 1px solid #d9b18c;;
+	margin: 5px;
+	background-color: white;
+	box-shadow: 1px 1px #f3e5d8;
+}
+
+.upper-card{
+	width: 350px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	cursor: pointer;
+}
+
+.card:hover{
+	border: 2px solid #d9b18c;;
+	margin: 4px;
+}
+
+.post-image {
+	position: relative;
+	left: 50%;
+  	top: 55%;
+  	transform: translate(-50%,-50%);
+  	height: 200px;
+  	width: 200px;
+}
+
+
+.post-likes {
+	width: 350px;
+	height: 50px;
+	display: flex;
+	justify-content: left;
+	cursor: auto;
+}
+
+.post-like-number {
+	position: relative;
+	margin-top: 25px;
+	font-size: 80%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	color: #272f3a;
+}
+
+.post-like-btn{
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 25px;
+	height: 25px;
+	background-color: inherit;
+	cursor: pointer;
+
+}
+
+.post-like-icon{
+	position:relative;
+	margin: 2.5px;
+	background-color: inherit;
+	color: white;
+	width: 20px;
+	height: 20px;
+}
+
+.post-title {
+	position: relative;
+	font-size: 80%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 25px;
+	color: #272f3a;
+}
+
+.product-type {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 70%;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	margin-top: 5px;
+	color: #272f3a;
+}
+
+.product-price {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 5px;
+}
