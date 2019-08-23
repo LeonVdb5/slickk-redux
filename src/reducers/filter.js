@@ -2,7 +2,7 @@ import { ProductHoldFilters, ProductShineFilters, HairLengthFilters, HairTypeFil
 
 export const ProductHoldFilter = (state = ProductHoldFilters.SHOW_ALL_HOLD, action) => {
 	switch (action.type) {
-		case 'SET_VISIBILITY_FILTER':
+		case 'SET_HOLD_FILTER':
 			return action.filter 
 		default:
 			return state
@@ -11,7 +11,7 @@ export const ProductHoldFilter = (state = ProductHoldFilters.SHOW_ALL_HOLD, acti
 
 export const ProductShineFilter = (state = ProductShineFilters.SHOW_ALL_SHINE, action) => {
 	switch (action.type) {
-		case 'SET_VISIBILITY_FILTER':
+		case 'SET_SHINE_FILTER':
 			return action.filter 
 		default:
 			return state
@@ -20,7 +20,7 @@ export const ProductShineFilter = (state = ProductShineFilters.SHOW_ALL_SHINE, a
 
 export const HairLengthFilter = (state = HairLengthFilters.SHOW_ALL_LENGTH, action) => {
 	switch (action.type) {
-		case 'SET_VISIBILITY_FILTER':
+		case 'SET_HAIRLENGTH_FILTER':
 			return action.filter 
 		default:
 			return state
@@ -29,7 +29,7 @@ export const HairLengthFilter = (state = HairLengthFilters.SHOW_ALL_LENGTH, acti
 
 export const HairTypeFilter = (state = HairTypeFilters.SHOW_ALL_HAIRTYPES, action) => {
 	switch (action.type) {
-		case 'SET_VISIBILITY_FILTER':
+		case 'SET_HAIRTYPE_FILTER':
 			return action.filter 
 		default:
 			return state

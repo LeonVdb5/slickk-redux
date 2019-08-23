@@ -6,33 +6,15 @@ import { HairLengthFilters, HairTypeFilters } from '../constants';
 export const HairFilterBar = () => (
 	<div className = "hairFilterBar">
 		<ul>
-			<FilterLink  filter={HairLengthFilters.SHOW_ALL_LENGTH}>
-				ALL HAIR LENGTHS 
-			</FilterLink>
-			<FilterLink  filter={HairLengthFilters.SHOW_SHORT_LENGTH}>
-				SHORT 
-			</FilterLink>
-			<FilterLink  filter={HairLengthFilters.SHOW_MED_LENGTH}>
-				MEDIUM
-			</FilterLink>
-			<FilterLink  filter={HairLengthFilters.SHOW_LONG_LENGTH}>
-				LONG
-			</FilterLink>
-			<FilterLink  filter={HairTypeFilters.SHOW_ALL_HAIRTYPES}>
-				ALL HAIR TYPES 
-			</FilterLink>
-			<FilterLink  filter={HairTypeFilters.SHOW_STRAIGHT_HAIR}>
-				STRAIGHT 
-			</FilterLink>
-			<FilterLink  filter={HairTypeFilters.SHOW_WAVY_HAIR}>
-				WAVY
-			</FilterLink>
-			<FilterLink  filter={HairTypeFilters.SHOW_CURLY_HAIR}>
-				CURLY
-			</FilterLink>
-			<FilterLink  filter={HairTypeFilters.SHOW_COILY_HAIR}>
-				COILY
-			</FilterLink>
+			<FilterLink  filter={HairLengthFilters.SHOW_ALL_LENGTH} type={"hairlength"}>ALL HAIR LENGTHS </FilterLink>
+			<FilterLink  filter={HairLengthFilters.SHOW_SHORT_LENGTH} type={"hairlength"}>SHORT </FilterLink>
+			<FilterLink  filter={HairLengthFilters.SHOW_MED_LENGTH} type={"hairlength"}>MEDIUM</FilterLink>
+			<FilterLink  filter={HairLengthFilters.SHOW_LONG_LENGTH} type={"hairlength"}>LONG</FilterLink>
+			<FilterLink  filter={HairTypeFilters.SHOW_ALL_HAIRTYPES} type={"hairtype"}>ALL HAIR TYPES </FilterLink>
+			<FilterLink  filter={HairTypeFilters.SHOW_STRAIGHT_HAIR} type={"hairtype"}>STRAIGHT </FilterLink>
+			<FilterLink  filter={HairTypeFilters.SHOW_WAVY_HAIR} type={"hairtype"}>WAVY</FilterLink>
+			<FilterLink  filter={HairTypeFilters.SHOW_CURLY_HAIR} type={"hairtype"}>CURLY</FilterLink>
+			<FilterLink  filter={HairTypeFilters.SHOW_COILY_HAIR} type={"hairtype"}>COILY</FilterLink>
 		</ul>
 	</div>
 )

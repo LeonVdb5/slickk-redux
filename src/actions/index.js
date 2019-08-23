@@ -26,7 +26,22 @@ export const requestPosts = () => (dispatch) => {
     .catch(error => dispatch({ type: REQUEST_POSTS_FAILED, payload: error }))
 }
 
-export const setVisibilityFilter = filter => ({
-  type: 'SET_VISIBILITY_FILTER',
+export const setHoldFilter = filter => ({
+  type: 'SET_HOLD_FILTER',
+  filter
+})
+
+export const setShineFilter = filter => ({
+  type: 'SET_SHINE_FILTER',
+  filter
+})
+
+export const setHairlengthFilter = filter => ({
+  type: 'SET_HAIRLENGTH_FILTER',
+  filter
+})
+
+export const setHairtypeFilter = filter => ({
+  type: 'SET_HAIRTYPE_FILTER',
   filter
 })
