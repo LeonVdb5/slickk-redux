@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import './PostCard.css';
 import likeIcon from '../icons/like.png';
 import likedIcon from '../icons/like-red.png';
 
@@ -10,7 +11,7 @@ const HairstyleCard = ({ hairstyle }) => (
 			<div>
 				<img className="post-image" src={require(`../images/${hairstyle.pid}.jpg`)}/>
 			</div>
-			<div className="hairstyle-username">{hairstyle.username}</div>
+			<div className="post-title">{hairstyle.username}</div>
 			<div className="hairstyle-type">{hairstyle.hairstyle}</div>
 		</Link>
 		<div className="lower-card">

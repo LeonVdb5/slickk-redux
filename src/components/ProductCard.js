@@ -1,20 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import likeIcon from '../icons/like.png';
 import likedIcon from '../icons/like-red.png';
 
 
 const ProductCard = ({ product }) => (
-	console.log(product),
 	<div className="card">
-		<Link to="/" className="upper-card">
-			<div>
-				<img className="post-image" src={require(`../images/${product.pid}.jpg`)}/>
+		<NavLink to="/">
+			<div className="upper-card">
+				<div>
+					<img className="post-image" src={require(`../images/${product.pid}.jpg`)}/>
+				</div>
+				<div className="post-title">{product.name}</div>
+				<div className="product-type">{product.type}</div>
+				<div className="product-price">{product.price}</div>
 			</div>
-			<div className="product-name">{product.name}</div>
-			<div className="product-type">{product.type}</div>
-			<div className="product-price">{product.price}</div>
-		</Link>
+		</NavLink>
 		<div className="lower-card">
 			<div className="post-likes">
 				<div className="post-like-btn">
