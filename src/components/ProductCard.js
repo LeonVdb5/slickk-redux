@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => (
 		<NavLink to="/">
 			<div className="upper-card">
 				<div>
-					<img className="post-image" src={require(`../images/${product.pid}.jpg`)}/>
+					<img className="post-image" src={require(`../images/${product.pid}.jpg`)} alt="product"/>
 				</div>
 				<div className="post-title">{product.name}</div>
 				<div className="product-type">{product.type}</div>

@@ -9,7 +9,7 @@ const HairstyleCard = ({ hairstyle }) => (
 	<div className="card">
 		<Link to="/" className="upper-card">
 			<div>
-				<img className="post-image" src={require(`../images/${hairstyle.pid}.jpg`)}/>
+				<img className="post-image" src={require(`../images/${hairstyle.pid}.jpg`)} alt="hairstyle"/>
 			</div>
 			<div className="post-title">{hairstyle.username}</div>
 			<div className="hairstyle-type">{hairstyle.hairstyle}</div>
