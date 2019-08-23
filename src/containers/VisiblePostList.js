@@ -6,7 +6,11 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { push } from 'react-router-redux';
 
 import HairstyleList from '../components/HairstyleList';
+import HairFilterBar from '../components/HairFilterBar';
+
 import ProductList from '../components/ProductList';
+import ProductFilterBar from '../components/ProductFilterBar';
+
 
 
 
@@ -101,8 +105,7 @@ class VisiblePostList extends Component {
     this.props.onRequestPosts();
   }
 
-
-	render () {
+	render () { 
 
 		let { products, hairstyles } = this.props;
 		
@@ -110,21 +113,33 @@ class VisiblePostList extends Component {
 			<div>
 				<Link to="/products">PRODUCTS</Link>
 				<Link to="/hairstyles">HAIRSTYLES</Link>
-				<Switch>
-					<Route
-						path="/products"
-						render={(props) => <ProductList {...props} products={products} />}
-					/>
-					<Route
-						path="/hairstyles"
-						render={props => <HairstyleList {...props} hairstyles={hairstyles} />}
-					/>
-				</Switch>
+				<div className="filter-container">
+					<Switch>
+						<Route
+							path="/products"
+							component={ProductFilterBar}
+						/>
+						<Route
+							path="/hairstyles"
+							component={HairFilterBar}
+						/>
+					</Switch>
+				</div>
+				<div className="posts-container">
+					<Switch>
+						<Route
+							path="/products"
+							render={(props) => <ProductList {...props} products={products} />}
+						/>
+						<Route
+							path="/hairstyles"
+							render={props => <HairstyleList {...props} hairstyles={hairstyles} />}
+						/>
+					</Switch>
+				</div>
 			</div>
-			
 		);
 	}
-
 
 }
 

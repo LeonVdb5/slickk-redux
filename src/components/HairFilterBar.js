@@ -1,6 +1,6 @@
 import React from 'react';
 import FilterLink from '../containers/FilterLink';
-import { HairLengthFilters, HairTypeFilters } from '../actions/index';
+import { HairLengthFilters, HairTypeFilters } from '../constants';
 
 
 export const HairFilterBar = () => (
