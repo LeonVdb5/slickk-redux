@@ -6,7 +6,7 @@ import likedIcon from '../icons/like-red.png';
 
 const ProductCard = ({ product }) => (
 	<div className="card">
-		<NavLink to="/">
+		<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/">
 			<div className="upper-card">
 				<div>
 					<img className="post-image" src={require(`../images/${product.pid}.jpg`)} alt="product"/>

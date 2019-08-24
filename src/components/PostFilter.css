@@ -1,0 +1,27 @@
+.filter-items-container button{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+	text-align: left;
+	margin-left: 15%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 80%;
+}
+
+.filter-items-container button:hover{
+	text-decoration:underline;
+}
+
+.filter-items-container{
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+}
+
+.default-sort button{
+	font-weight: bold;
+}
+

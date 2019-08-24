@@ -1,0 +1,26 @@
+.main-container{
+	display: flex;
+	height: 100%;
+	width: 100vw;
+}
+
+.filter-container{
+	width:12.25%;
+}
+
+.posts-container{
+	width: 75.5%;
+}
+
+.sort-container{
+	width: 12.25%;
+}
+
+.post-components{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 65px;
+	/*margin-bottom: 65px;*/
+
+}

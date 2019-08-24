@@ -7,12 +7,14 @@ import likedIcon from '../icons/like-red.png';
 
 const HairstyleCard = ({ hairstyle }) => (
 	<div className="card">
-		<Link to="/" className="upper-card">
-			<div>
-				<img className="post-image" src={require(`../images/${hairstyle.pid}.jpg`)} alt="hairstyle"/>
+		<Link style={{ textDecoration: 'none', color: 'black' }} to="/">
+			<div className="upper-card">
+				<div>
+					<img className="post-image" src={require(`../images/${hairstyle.pid}.jpg`)} alt="hairstyle"/>
+				</div>
+				<div className="post-title">{hairstyle.username}</div>
+				<div className="hairstyle-type">{hairstyle.hairstyle}</div>
 			</div>
-			<div className="post-title">{hairstyle.username}</div>
-			<div className="hairstyle-type">{hairstyle.hairstyle}</div>
 		</Link>
 		<div className="lower-card">
 			<div className="post-likes">

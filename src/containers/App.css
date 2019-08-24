@@ -23,6 +23,21 @@
   color: #61dafb;
 }
 
+.app-main-container{
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav{
+  position: fixed;
+  z-index: 9999;
+}
+
+.main-container{
+  position: fixed;
+  z-index: 2;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
