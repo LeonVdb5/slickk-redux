@@ -18,6 +18,8 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 			case "hairtype":
 				dispatch(setHairtypeFilter(ownProps.filter))
 				break;
+			default:
+				throw new Error ("no type")
 		}
 	}
 })

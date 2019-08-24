@@ -1,0 +1,84 @@
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+.nav-main{                          
+  	background-color: inherit;
+  	width: 100vw;
+  	height: 60px;
+}
+	
+
+.nav-left-container{
+	background-color: rgba(0, 0, 0, 0);
+	float: left;
+	width: 33.3vw;
+	height:60px;
+}
+
+.nav-center-container{
+	background-color: rgba(0, 0, 0, 0);
+	text-align: center;
+	float: left;
+	width: 33.3vw;
+	height:60px;
+}
+
+.nav-right-container{
+	background-color: rgba(0, 0, 0, 0);
+	float: left;
+	text-align: right;
+	width: 33.3vw;
+	height:60px;
+}
+
+.nav-logo {
+	font-family: 'Pacifico', cursive;
+	font-size: 200%;
+	color: grey;
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.nav-logo:hover {
+	color: black;
+}
+
+.nav-right-container button{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	margin-left: 10%;
+	margin-right: 5%;
+	line-height: 60px;
+}
+
+.nav-right-container button:hover{
+	text-decoration:underline;
+}
+
+.nav-left-container button{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	margin-left: 6%;
+	line-height: 60px;
+}
+
+.nav-left-container button:hover{
+	text-decoration:underline;
+}
+

@@ -1,9 +1,10 @@
 import React from 'react'
+import './PostFilter.css';
 
 const Link = ({children, onClick}) => (
-	<li onClick = {onClick}>
-	{children}
-	</li>
+	<button onClick = {onClick}>
+		{children}
+	</button>
 )
 
 export default Link

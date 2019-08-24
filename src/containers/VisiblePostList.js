@@ -6,10 +6,9 @@ import { Route, Switch, Link } from 'react-router-dom';
 
 import HairstyleList from '../components/HairstyleList';
 import HairFilterBar from '../components/HairFilterBar';
-
 import ProductList from '../components/ProductList';
 import ProductFilterBar from '../components/ProductFilterBar';
-
+import './VisiblePostList.css';
 
 
 
@@ -109,18 +108,13 @@ const getVisibleHairstyles = (hairstyles, lengthFilter, typeFilter) => {
 	}
 }
 
-
-
 const mapStateToProps = (state) => {
-	console.log(state)
 	return {
   	products: getVisibleProducts(state.requestPosts.products, state.ProductHoldFilter, state.ProductShineFilter),
   	hairstyles: getVisibleHairstyles(state.requestPosts.hairstyles, state.HairLengthFilter, state.HairTypeFilter),
   	isPending: state.requestPosts.isPending
 	}
 }
-
-
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -140,9 +134,7 @@ class VisiblePostList extends Component {
 		let { products, hairstyles } = this.props;
 		
 		return (
-			<div>
-				<Link to="/products">PRODUCTS</Link>
-				<Link to="/hairstyles">HAIRSTYLES</Link>
+			<div className="main-container">
 				<div className="filter-container">
 					<Switch>
 						<Route
@@ -156,16 +148,18 @@ class VisiblePostList extends Component {
 					</Switch>
 				</div>
 				<div className="posts-container">
-					<Switch>
-						<Route
-							path="/products"
-							render={(props) => <ProductList {...props} products={products} />}
-						/>
-						<Route
-							path="/hairstyles"
-							render={props => <HairstyleList {...props} hairstyles={hairstyles} />}
-						/>
-					</Switch>
+						<Switch>
+							<Route
+								path="/products"
+								render={(props) => <ProductList {...props} products={products} />}
+							/>
+							<Route
+								path="/hairstyles"
+								render={props => <HairstyleList {...props} hairstyles={hairstyles} />}
+							/>
+						</Switch>
+				</div>
+				<div className="sort-container">
 				</div>
 			</div>
 		);

@@ -1,10 +1,11 @@
+
+
 .card {
 	width: 350px;
 	height: 350px;
-	border: 1px solid #d9b18c;;
+	border: 1px solid lightgrey;
 	margin: 5px;
-	background-color: white;
-	box-shadow: 1px 1px #f3e5d8;
+	background-color: white;	
 }
 
 .upper-card{
@@ -18,7 +19,7 @@
 }
 
 .card:hover{
-	border: 2px solid #d9b18c;;
+	border: 2px solid lightgrey;
 	margin: 4px;
 }
 
