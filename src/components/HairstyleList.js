@@ -1,5 +1,6 @@
 import React from 'react'
 import HairstyleCard from './HairstyleCard'
+import '../containers/VisiblePostList.css'
 
 const HairstyleList = (props) => (
 	(props.hairstyles) ?

@@ -16,13 +16,13 @@ const Nav = () => {
 				</Link>
 			</div>
 			<div className="nav-right-container">
-				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/hairstyles">
+				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/hairstyles" activeClassName="selectedLink">
 					<button className="nav-hairstyles">HAIRSTYLES</button>
 				</NavLink>
-				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/products">
+				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/products" activeClassName="selectedLink">
 					<button className="nav-products">PRODUCTS</button>
 				</NavLink>
-				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/login">
+				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/login" activeClassName="selectedLink">
 					<button className="nav-login">LOGIN</button>
 				</NavLink>
 			</div>
