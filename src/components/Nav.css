@@ -82,3 +82,7 @@
 	text-decoration:underline;
 }
 
+.selectedLink button {
+	text-decoration: underline;
+}
+
