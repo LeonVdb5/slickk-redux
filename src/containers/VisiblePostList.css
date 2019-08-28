@@ -1,26 +1,30 @@
 .main-container{
-	display: flex;
 	height: 100%;
 	width: 100vw;
 }
 
 .filter-container{
-	width:12.25%;
+	position: fixed;
+	width: 12.25%;
+	max-height: 100vh;
 }
 
 .posts-container{
 	width: 75.5%;
+	margin-left: 12.25%;
 }
 
 .sort-container{
 	width: 12.25%;
+	height: 100%;
 }
 
 .post-components{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-top: 65px;
-	/*margin-bottom: 65px;*/
-
+	padding-bottom: 3px;
+}
+.scroll-box{
+	min-height: 100vh;
 }

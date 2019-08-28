@@ -16,6 +16,8 @@ const App = () => {
         <div className="main-container">
           <VisiblePostList />
         </div>
+        <div className="footer">
+        </div>
       </div>
     ); 
 }

@@ -4,6 +4,7 @@ import { requestPosts } from '../actions/index';
 import { ProductHoldFilters, ProductShineFilters, HairLengthFilters, HairTypeFilters } from '../constants';
 import { Route, Switch, Link } from 'react-router-dom';
 
+import PostList from '../components/PostList';
 import HairstyleList from '../components/HairstyleList';
 import HairFilterBar from '../components/HairFilterBar';
 import ProductList from '../components/ProductList';
@@ -149,6 +150,10 @@ class VisiblePostList extends Component {
 				</div>
 				<div className="posts-container">
 						<Switch>
+							<Route
+								exact path="/"
+								render={(props) => <PostList {...props} products={products} hairstyles={hairstyles} />}
+							/>
 							<Route
 								path="/products"
 								render={(props) => <ProductList {...props} products={products} />}
