@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import { setHoldFilter, setShineFilter, setHairlengthFilter, setHairtypeFilter } from '../actions/index'; 
+import { setHoldFilter, setShineFilter, setHairlengthFilter, setHairtypeFilter, resetFilter } from '../actions/index'; 
 import Link from '../components/Link';
 
 
@@ -17,6 +17,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 				break;
 			case "hairtype":
 				dispatch(setHairtypeFilter(ownProps.filter))
+				break;
+			case "reset":
+				dispatch(resetFilter())
 				break;
 			default:
 				throw new Error ("no type")

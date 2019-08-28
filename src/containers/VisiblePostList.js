@@ -9,6 +9,7 @@ import HairstyleList from '../components/HairstyleList';
 import HairFilterBar from '../components/HairFilterBar';
 import ProductList from '../components/ProductList';
 import ProductFilterBar from '../components/ProductFilterBar';
+
 import './VisiblePostList.css';
 
 

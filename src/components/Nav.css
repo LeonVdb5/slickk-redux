@@ -5,29 +5,24 @@
   	width: 100vw;
   	height: 60px;
 }
-	
-
 .nav-left-container{
 	float: left;
 	width: 33.3vw;
 	height:60px;
 }
-
 .nav-center-container{
 	text-align: center;
 	float: left;
 	width: 33.3vw;
 	height:60px;
 }
-
 .nav-right-container{
 	float: left;
 	text-align: right;
 	width: 33.3vw;
 	height:60px;
 }
-
-.nav-logo {
+.nav-center-container button {
 	font-family: 'Pacifico', cursive;
 	font-size: 200%;
 	color: black;
@@ -36,11 +31,6 @@
 	cursor: pointer;
 	outline: inherit;
 }
-
-.nav-logo:hover {
-	color: grey;
-}
-
 .nav-right-container button{
 	background: none;
 	color: inherit;
@@ -50,18 +40,15 @@
 	outline: inherit;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
-
 	font-size: 80%;
 	font-weight: bold;
 	margin-left: 10%;
 	margin-right: 5%;
 	line-height: 60px;
 }
-
 .nav-right-container button:hover{
 	text-decoration:underline;
 }
-
 .nav-left-container button{
 	background: none;
 	color: inherit;
@@ -76,11 +63,9 @@
 	margin-left: 6%;
 	line-height: 60px;
 }
-
 .nav-left-container button:hover{
 	text-decoration:underline;
 }
-
 .selectedLink button {
 	text-decoration: underline;
 }

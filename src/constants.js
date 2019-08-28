@@ -29,3 +29,5 @@ export const HairTypeFilters = {
 	SHOW_CURLY_HAIR : 'SHOW_CURLY_HAIR',
 	SHOW_COILY_HAIR : 'SHOW_COILY_HAIR'
 }
+
+export const RESET_FILTER = 'RESET_FILTER';
