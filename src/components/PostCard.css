@@ -1,97 +1,154 @@
-
-
 .card {
-	width: 350px;
+	width: 270px;
 	height: 350px;
 	border: 1px solid lightgrey;
 	margin: 5px;
 	background-color: white;	
 }
-
-.upper-card{
-	width: 350px;
-	height: 300px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-color: white;
-	cursor: pointer;
-}
-
 .card:hover{
 	border: 2px solid lightgrey;
 	margin: 4px;
 }
-
-.post-image {
-	position: relative;
-	left: 50%;
-  	top: 55%;
-  	transform: translate(-50%,-50%);
-  	height: 200px;
-  	width: 200px;
+.lower-card{
+	display: flex;
+	flex-direction: column;
 }
-
-
 .post-likes {
-	width: 350px;
-	height: 50px;
+	width: 270px;
+	height: 30px;
 	display: flex;
 	justify-content: left;
 	cursor: auto;
+	margin-top: 2px;
 }
-
 .post-like-number {
-	position: relative;
-	margin-top: 25px;
+	margin-top: 5px;
 	font-size: 80%;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: bold;
 	color: #272f3a;
 }
-
 .post-like-btn{
-	margin-top: 20px;
 	margin-left: 5px;
 	margin-right: 5px;
 	width: 25px;
 	height: 25px;
 	background-color: inherit;
 	cursor: pointer;
-
 }
-
 .post-like-icon{
-	position:relative;
-	margin: 2.5px;
+	margin-top: 5px;
+	margin-left: 2.5px;
 	background-color: inherit;
 	color: white;
 	width: 20px;
 	height: 20px;
 }
-
-.post-title {
-	position: relative;
-	font-size: 80%;
-	font-family: 'Roboto', sans-serif;
-	font-weight: bold;
-	text-align: center;
-	margin-top: 25px;
-	color: #272f3a;
+.post-time{
+	font-size: 55%;
+	font-family: 'Lato', sans-serif;
+	margin-left: 8px;
+	margin-bottom: 3px;
+	color: grey;
 }
 
+/*  ProductCard  */
+
+.upper-card{
+	width: 270px;
+	height: 305px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	cursor: pointer;
+	border-bottom: 1px solid lightgrey;
+}
+.product-image-div {
+  	height: 225px;
+  	width: 270px;
+  	border-top: 1px solid lightgrey;
+  	display: flex;
+  	justify-content: center;
+}
+.product-image{
+	margin-top: 10px;
+	height: 225px;
+  	width: 225px;
+}
+.product-title {
+	height: 22px;
+	font-size: 80%;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	line-height: 9px;
+	color: #272f3a;
+	text-transform: capitalize;
+	
+}
 .product-type {
-	position: relative;
 	text-transform: uppercase;
 	font-size: 70%;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
 	text-align: center;
 	margin-top: 5px;
 	color: #272f3a;
 }
-
 .product-price {
 	text-align: center;
-	font-family: 'Roboto', sans-serif;
-	margin-top: 5px;
+	font-family: 'Lato', sans-serif;
+	margin-top: 10px;
+}
+
+/*  HairstyleCard  */
+
+.upper-card-hairstyle{
+	width: 270px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	background-color: white;
+	cursor: pointer;
+}
+.hairstyle-user{
+	align-self: left;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	margin-left: 7.5px;
+	display: flex;
+}
+.hairstyle-username{
+	align-self: flex-start;
+	font-size: 80%;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	text-align: left;
+	color: #272f3a;
+	margin-left: 8px;
+	margin-top: 2px;
+}
+.user-profile-pic{
+	width: 22px;
+	height: 22px;
+}
+.hairstyle-image-div {
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+  	height: 270px;
+  	width: 270px;
+}
+.hairstyle-image{
+	height: 270px;
+  	width: 270px;
+}
+.hairstyle-title {
+	font-size: 80%;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 8px;
+	color: #272f3a;
+	text-transform: capitalize;
 }

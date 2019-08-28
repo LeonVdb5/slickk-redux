@@ -45,3 +45,6 @@ export const setHairtypeFilter = filter => ({
   type: 'SET_HAIRTYPE_FILTER',
   filter
 })
+export const resetFilter = () => ({
+  type: 'RESET_FILTER'
+})
