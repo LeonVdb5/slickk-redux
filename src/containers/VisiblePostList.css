@@ -1,7 +1,3 @@
-.main-container{
-	height: 100%;
-	width: 100vw;
-}
 
 .filter-container{
 	position: fixed;
@@ -23,7 +19,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding-bottom: 3px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 .scroll-box{
 	min-height: 100vh;

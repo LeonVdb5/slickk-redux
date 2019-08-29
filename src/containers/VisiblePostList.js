@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { requestPosts } from '../actions/index';
 import { ProductHoldFilters, ProductShineFilters, HairLengthFilters, HairTypeFilters } from '../constants';
-import { Route, Switch, Link } from 'react-router-dom';
+import { withRouter, Route, Switch, Link } from 'react-router-dom';
 
 import PostList from '../components/PostList';
 import HairstyleList from '../components/HairstyleList';
@@ -136,7 +136,7 @@ class VisiblePostList extends Component {
 		let { products, hairstyles } = this.props;
 		
 		return (
-			<div className="main-container">
+			<div className="postlist-main-container">
 				<div className="filter-container">
 					<Switch>
 						<Route
@@ -174,4 +174,4 @@ class VisiblePostList extends Component {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(VisiblePostList)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(VisiblePostList))

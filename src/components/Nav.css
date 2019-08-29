@@ -23,8 +23,9 @@
 	height:60px;
 }
 .nav-center-container button {
-	font-family: 'Pacifico', cursive;
-	font-size: 200%;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 40px;
+	line-height: 58px;
 	color: black;
 	border: none;
 	background-color: inherit;
@@ -39,7 +40,7 @@
 	cursor: pointer;
 	outline: inherit;
 	text-align: center;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	font-size: 80%;
 	font-weight: bold;
 	margin-left: 10%;
@@ -57,7 +58,7 @@
 	cursor: pointer;
 	outline: inherit;
 	text-align: center;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	font-size: 80%;
 	font-weight: bold;
 	margin-left: 6%;

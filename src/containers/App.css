@@ -8,24 +8,22 @@
 
 .app-main-container{
   min-height: 100%;
-  position: relative;
 }
 
 .nav{
   position: fixed;
   border-bottom: 1px solid lightgrey;
   background-color: #FFFFFF;
+  top: 0;
 }
 
 .main-container{
-  padding-top: 34px;
-  padding-bottom: 185px;
-  height: 100%;
+  margin-top: 61px;
+  min-height: calc(100vh - 61px);
   background-color: #fafafa;
 }
 
 .footer{
-  position: absolute;
   width: 100vw;
   height: 370px;
   border-top: 1px solid lightgrey;

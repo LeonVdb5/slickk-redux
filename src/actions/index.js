@@ -1,9 +1,7 @@
-import {
-  REQUEST_POSTS_PENDING,
-  REQUEST_POSTS_SUCCESS,
-  REQUEST_POSTS_FAILED
-} from '../constants'
+import { REQUEST_POSTS_PENDING, REQUEST_POSTS_SUCCESS, REQUEST_POSTS_FAILED } from '../constants'
 
+
+// fetch posts
 export const requestPosts = () => (dispatch) => {
   dispatch({ type: REQUEST_POSTS_PENDING })
   fetch('http://localhost:3000/products/')
@@ -26,21 +24,20 @@ export const requestPosts = () => (dispatch) => {
     .catch(error => dispatch({ type: REQUEST_POSTS_FAILED, payload: error }))
 }
 
+
+// set filters
 export const setHoldFilter = filter => ({
   type: 'SET_HOLD_FILTER',
   filter
 })
-
 export const setShineFilter = filter => ({
   type: 'SET_SHINE_FILTER',
   filter
 })
-
 export const setHairlengthFilter = filter => ({
   type: 'SET_HAIRLENGTH_FILTER',
   filter
 })
-
 export const setHairtypeFilter = filter => ({
   type: 'SET_HAIRTYPE_FILTER',
   filter
