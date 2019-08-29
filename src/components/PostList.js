@@ -6,7 +6,6 @@ const Quicksort = require('optimized-quicksort');
 
 const PostList = (props) => (
 	(props.products && props.hairstyles) ?
-		// <div className="scroll-box" style={{overflowY: 'scroll', height: '100%'}}>
 		<div className="scroll-box">
 			<div className="post-components">
 				{Quicksort.sort(props.products.concat(props.hairstyles),(a,b) => b.numlikes-a.numlikes)
