@@ -36,9 +36,8 @@
 	background: none;
 	color: inherit;
 	border: none;
-	padding: 0;
 	cursor: pointer;
-	outline: inherit;
+	outline: none;
 	text-align: center;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 80%;
@@ -48,7 +47,7 @@
 	line-height: 60px;
 }
 .nav-right-container button:hover{
-	text-decoration:underline;
+	color: #3899ec;
 }
 .nav-left-container button{
 	background: none;
@@ -65,9 +64,9 @@
 	line-height: 60px;
 }
 .nav-left-container button:hover{
-	text-decoration:underline;
+	color: #3899ec;
 }
 .selectedLink button {
-	text-decoration: underline;
+	color: #3899ec;
 }
 
