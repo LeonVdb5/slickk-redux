@@ -22,7 +22,7 @@ const getVisibleProducts = (products, holdFilter, shineFilter) => {
 			break;
 		case ProductHoldFilters.SHOW_HIGH_HOLD:
 			visibleProducts = products.filter((p) => {
-				if(p.product_type==="gel" || p.product_type==="pomade" || p.product_type==="pomade"){
+				if(p.product_type==="gel" || p.product_type==="pomade" || p.product_type==="clay"){
 					return true;
 				} 
 				return false;
@@ -114,6 +114,8 @@ const mapStateToProps = (state) => {
 	return {
   	products: getVisibleProducts(state.requestPosts.products, state.ProductHoldFilter, state.ProductShineFilter),
   	hairstyles: getVisibleHairstyles(state.requestPosts.hairstyles, state.HairLengthFilter, state.HairTypeFilter),
+  	productHoldFilter: state.ProductHoldFilter,
+  	productShineFilter: state.ProductShineFilter,
   	isPending: state.requestPosts.isPending
 	}
 }
@@ -133,15 +135,15 @@ class VisiblePostList extends Component {
 
 	render () { 
 
-		let { products, hairstyles } = this.props;
+		let { products, hairstyles, productHoldFilter, productShineFilter } = this.props;
 		
 		return (
 			<div className="postlist-main-container">
 				<div className="filter-container">
 					<Switch>
 						<Route
-							path="/products"
-							component={ProductFilterBar}
+							path={`/products/${productHoldFilter}/${productShineFilter}`}
+							render={(props) => <ProductFilterBar {...props} holdFilter={productHoldFilter} shineFilter={productShineFilter}/>}
 						/>
 						<Route
 							path="/hairstyles"
@@ -156,7 +158,7 @@ class VisiblePostList extends Component {
 								render={(props) => <PostList {...props} products={products} hairstyles={hairstyles} />}
 							/>
 							<Route
-								path="/products"
+								path={`/products/${productHoldFilter}/${productShineFilter}`}
 								render={(props) => <ProductList {...props} products={products} />}
 							/>
 							<Route

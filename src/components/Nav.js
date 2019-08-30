@@ -20,7 +20,7 @@ const Nav = () => {
 				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/hairstyles" activeClassName="selectedLink">
 					<FilterLink className="nav-hairstyles" type='reset'>HAIRSTYLES</FilterLink>
 				</NavLink>
-				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/products" activeClassName="selectedLink">
+				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/products/all-holds/all-shines" activeClassName="selectedLink">
 					<FilterLink className="nav-products" type='reset'>PRODUCTS</FilterLink>
 				</NavLink>
 				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/login" activeClassName="selectedLink">

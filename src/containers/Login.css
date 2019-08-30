@@ -1,18 +1,37 @@
-.login-form-container{
+.login-outer-container{
 	position: fixed;
-	width: 350px;
-	height: 550px;
-	display: flex;
-	flex-direction: column;
 	left: 50%;
 	transform: translate(-50%);
-	margin-top: 70px;
+	margin-top: 60px;
+	display: flex;
+}
+
+.login-form-container{
+	width: 350px;
+	display: flex;
+	flex-direction: column;
 	text-align: center;
+	border-right: 1px solid lightgrey;
+	padding-right: 70px;
+}
+.register-form-container{
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-left: 69px;
 }
 .login-title{
 	font-family: 'Quicksand', sans-serif;
-	font-weight: 100;
-	font-size: 45px;
+	font-weight: lighter;
+	font-size: 30px;
+	color: #585858;
+}
+.register-title{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: lighter;
+	font-size: 30px;
+	color: #585858;
 }
 .login-form{
 	display: block;

@@ -4,7 +4,7 @@
 	border: none;
 	padding: 0;
 	cursor: pointer;
-	outline: inherit;
+	outline: none;
 	text-align: left;
 	margin-left: 15%;
 	font-family: 'Quicksand', sans-serif;
@@ -13,7 +13,7 @@
 }
 
 .filter-items-container button:hover{
-	text-decoration:underline;
+	color: #3899ec;
 }
 
 .filter-items-container{
@@ -22,7 +22,8 @@
 	flex-direction: column;
 }
 
-.default-sort button{
+.selectedLink button {
+	color: #3899ec;
 	font-weight: bold;
 }
 
