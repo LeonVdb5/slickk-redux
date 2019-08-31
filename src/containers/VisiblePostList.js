@@ -110,12 +110,14 @@ const getVisibleHairstyles = (hairstyles, lengthFilter, typeFilter) => {
 	}
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
 	return {
-  	products: getVisibleProducts(state.requestPosts.products, state.ProductHoldFilter, state.ProductShineFilter),
-  	hairstyles: getVisibleHairstyles(state.requestPosts.hairstyles, state.HairLengthFilter, state.HairTypeFilter),
-  	productHoldFilter: state.ProductHoldFilter,
-  	productShineFilter: state.ProductShineFilter,
+  	products: getVisibleProducts(state.requestPosts.products, ownProps.holdFilter, ownProps.shineFilter),
+  	hairstyles: getVisibleHairstyles(state.requestPosts.hairstyles, ownProps.lengthFilter, ownProps.typeFilter),
+  	productHoldFilter: ownProps.holdFilter,
+  	productShineFilter: ownProps.shineFilter,
+  	hairLengthFilter: ownProps.lengthFilter,
+  	hairTypeFilter: ownProps.typeFilter,
   	isPending: state.requestPosts.isPending
 	}
 }
@@ -135,7 +137,7 @@ class VisiblePostList extends Component {
 
 	render () { 
 
-		let { products, hairstyles, productHoldFilter, productShineFilter } = this.props;
+		let { products, hairstyles, productHoldFilter, productShineFilter, hairLengthFilter, hairTypeFilter } = this.props;
 		
 		return (
 			<div className="postlist-main-container">
@@ -146,8 +148,8 @@ class VisiblePostList extends Component {
 							render={(props) => <ProductFilterBar {...props} holdFilter={productHoldFilter} shineFilter={productShineFilter}/>}
 						/>
 						<Route
-							path="/hairstyles"
-							component={HairFilterBar}
+							path={`/hairstyles/${hairLengthFilter}/${hairTypeFilter}`}
+							render={(props) => <HairFilterBar {...props} lengthFilter={hairLengthFilter} typeFilter={hairTypeFilter}/>}
 						/>
 					</Switch>
 				</div>
@@ -162,7 +164,7 @@ class VisiblePostList extends Component {
 								render={(props) => <ProductList {...props} products={products} />}
 							/>
 							<Route
-								path="/hairstyles"
+								path={`/hairstyles/${hairLengthFilter}/${hairTypeFilter}`}
 								render={props => <HairstyleList {...props} hairstyles={hairstyles} />}
 							/>
 						</Switch>

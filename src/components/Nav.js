@@ -2,6 +2,7 @@ import React from 'react';
 import './Nav.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import FilterLink from '../containers/FilterLink'
+import Searchbar from './Searchbar'
 
 
 const Nav = () => {
@@ -9,15 +10,15 @@ const Nav = () => {
 	return (
 		<div className="nav-main">
 			<div className="nav-left-container">
-				<button>SEARCH</button>
-			</div>
-			<div className="nav-center-container">
 				<Link style={{ textDecoration: 'none', color: 'black' }} to="/">
 					<FilterLink className="nav-logo" type='reset'>Slickk</FilterLink>
 				</Link>
 			</div>
+			<div className="nav-center-container">
+				<Searchbar />
+			</div>
 			<div className="nav-right-container">
-				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/hairstyles" activeClassName="selectedLink">
+				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/hairstyles/all-lengths/all-types" activeClassName="selectedLink">
 					<FilterLink className="nav-hairstyles" type='reset'>HAIRSTYLES</FilterLink>
 				</NavLink>
 				<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/products/all-holds/all-shines" activeClassName="selectedLink">
