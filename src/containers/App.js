@@ -9,7 +9,7 @@ import VisiblePostList from './VisiblePostList';
 import Login from './Login';
 
 
-const App = () => {
+const App = ({ match: { params } }) => {
     return (
       <div className="app-main-container">
           <div className="nav">
@@ -17,9 +17,18 @@ const App = () => {
           </div>
           <div className="main-container">
             <Switch>
-            <Route exact path="/" component={ VisiblePostList }/>
-            <Route path="/products" component={ VisiblePostList }/>
-            <Route path="/hairstyles" component={ VisiblePostList }/>
+            <Route 
+              exact path="/" 
+              render={(props) => <VisiblePostList {...props} holdFilter='all-holds' shineFilter='all-shines' lengthFilter='all-lengths' typeFilter='all-types' />}
+            />
+            <Route 
+              path="/products" 
+              render={(props) => <VisiblePostList {...props} holdFilter={params.filter1 || 'all-holds'} shineFilter={params.filter2 || 'all-shines'} lengthFilter='all-lengths' typeFilter='all-types' />}
+            />
+            <Route 
+              path="/hairstyles" 
+              render={(props) => <VisiblePostList {...props} holdFilter={'all-holds'} shineFilter={'all-shines'} lengthFilter={params.filter1 || 'all-lengths'} typeFilter={params.filter2 || 'all-types'} />}
+            />
             <Route path="/login" component={ Login }/>
             </Switch>
           </div>

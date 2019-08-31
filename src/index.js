@@ -16,7 +16,7 @@ const store = createStore(rootReducers, applyMiddleware(thunkMiddleware))
 ReactDOM.render(
 	<Provider store={store}>
 		<BrowserRouter>
-				<App />
+				<Route path="/:page?/:filter1?/:filter2?" component={App} />
 		</BrowserRouter>
 	</Provider>
 	, document.getElementById('root')
