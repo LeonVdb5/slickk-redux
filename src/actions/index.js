@@ -24,7 +24,6 @@ export const requestPosts = () => (dispatch) => {
     .catch(error => dispatch({ type: REQUEST_POSTS_FAILED, payload: error }))
 }
 
-
 // set filters
 export const setHoldFilter = filter => ({
   type: 'SET_HOLD_FILTER',

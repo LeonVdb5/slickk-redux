@@ -1,9 +1,11 @@
 import {
   REQUEST_POSTS_PENDING,
   REQUEST_POSTS_SUCCESS,
-  REQUEST_POSTS_FAILED
+  REQUEST_POSTS_FAILED,
+  AUTH_REGISTER,
+  AUTH_LOGIN,
+  AUTH_ERROR
 } from '../constants';
-
 
 export const requestPosts = (state={}, action={}) => {
   switch (action.type) {
@@ -21,6 +23,19 @@ export const requestPosts = (state={}, action={}) => {
       return Object.assign({}, state, {error: action.payload})
     
     default:
+      return state
+  }
+}
+
+export const auth = (state = {}, action={}) => {
+  switch (action.type) {
+    case AUTH_REGISTER:
+      return Object.assign({}, state, { authenticated: true, errorMessage: '' })
+    case AUTH_LOGIN: 
+      return Object.assign({}, state, { authenticated: true, errorMessage: '' })
+    case AUTH_ERROR:
+      return Object.assign({}, state, { authenticated: false, errorMessage: action.payload })
+    default: 
       return state
   }
 }

@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './Login.css';
 
+//Auth actions 
+import * as actions from '../actions/auth';
+
+const mapStateToProps = state => {
+    return {
+        errorMessage: state.auth.errorMessage
+    }
+}
 
 class Login extends React.Component {
 	constructor(props) {
@@ -10,8 +18,7 @@ class Login extends React.Component {
     	
     	this.state = {
     		user: {
-    			first_name: '',
-                last_name: '',
+    			email: '',
                 username: '',
                 password: ''
     		},
@@ -32,14 +39,19 @@ class Login extends React.Component {
 		this.setState({ [name]: value });
 	}
 
-	handleLoginSubmit(e) {
+	async handleLoginSubmit(e) {
 		e.preventDefault();
-
 		this.setState({ submittedLogin: true });
         const { username, password } = this.state;
-        // if (username && password) {
-        //     this.props.login(username, password);
-        // }
+        console.log(username);
+        console.log(password);
+        await this.props.login({username, password});
+        if (!this.props.errorMessage){
+            this.props.history.push('/');
+        }
+        else {
+            alert(this.props.errorMessage);
+        }
 	}
 
 	handleRegisterChange(e) {
@@ -53,16 +65,19 @@ class Login extends React.Component {
         });
     }
 
-    handleRegisterSubmit(e) {
+    async handleRegisterSubmit(e) {
         e.preventDefault();
-
         this.setState({ submittedRegister: true });
         const { user } = this.state;
-        // if (user.firstName && user.lastName && user.username && user.password) {
-        //     this.props.register(user);
-        // }
+        await this.props.register(user); 
+        console.log(this.props);
+        console.log('hello'); 
+        if (!this.props.errorMessage) {
+            this.props.history.push('/');
+        } else {
+            alert(this.props.errorMessage);
+        }
     }
-
 
 	render() {
 		// const { loggingIn } = this.props;
@@ -102,24 +117,15 @@ class Login extends React.Component {
 	  			<div className="register-form-container">
                 	<h2 className="register-title">Create an account</h2>
                 	<form name="login-form" onSubmit={this.handleRegisterSubmit}>
-                    	<div className={'form-group' + (submittedRegister && !user.firstName ? ' has-error' : '')}>
-                        	<label>
-                        		<input type="text" className="form-control" name="firstName" placeholder=" " value={user.firstName} onChange={this.handleRegisterChange} required/>
-                        		{submittedRegister && !user.firstName &&
-                            		<div className="help-block">First Name is required</div>
-                        		}
-                        		<span>First Name</span>
-                        	</label>
-                    	</div>
-                    	<div className={'form-group' + (submittedRegister && !user.lastName ? ' has-error' : '')}>
-                        	<label>
-                        		<input type="text" className="form-control" name="lastName" placeholder=" " value={user.lastName} onChange={this.handleRegisterChange} required/>
-                        		{submittedRegister && !user.lastName &&
-                            		<div className="help-block">Last Name is required</div>
-                        		}
-                        		<span>Last Name</span>
-                        	</label>
-                    	</div>
+                        <div className={'form-group' + (submittedRegister && !user.username ? ' has-error' : '')}>
+                            <label>
+                                <input type="text" className="form-control" name="email" placeholder=" " value={user.email} onChange={this.handleRegisterChange} required/>
+                                {submittedRegister && !user.username &&
+                                    <div className="help-block">Email is required</div>
+                                }
+                                <span>Email</span>
+                            </label>
+                        </div>
                     	<div className={'form-group' + (submittedRegister && !user.username ? ' has-error' : '')}>
                         	<label>
                         		<input type="text" className="form-control" name="username" placeholder=" " value={user.username} onChange={this.handleRegisterChange} required/>
@@ -148,4 +154,5 @@ class Login extends React.Component {
 	}
 }
 
-export default Login
+export default connect(mapStateToProps, actions)(Login)
+

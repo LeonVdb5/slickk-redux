@@ -3,6 +3,12 @@ export const REQUEST_POSTS_PENDING = 'REQUEST_POSTS_PENDING';
 export const REQUEST_POSTS_SUCCESS = 'REQUEST_POSTS_SUCCESS';
 export const REQUEST_POSTS_FAILED = 'REQUEST_POSTS_FAILED';
 
+//Auth 
+export const AUTH_REGISTER = 'AUTH_REGISTER';
+export const AUTH_LOGIN = 'AUTH_LOGIN';
+export const AUTH_ERROR = 'AUTH_ERROR';
+
+
 //Filter Posts
 export const ProductHoldFilters = {
 	SHOW_ALL_HOLD: 'all-holds',
