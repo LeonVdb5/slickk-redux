@@ -7,6 +7,7 @@ export const REQUEST_POSTS_FAILED = 'REQUEST_POSTS_FAILED';
 export const AUTH_REGISTER = 'AUTH_REGISTER';
 export const AUTH_LOGIN = 'AUTH_LOGIN';
 export const AUTH_ERROR = 'AUTH_ERROR';
+export const AUTH_SIGNOUT = 'AUTH_SIGNOUT';
 
 
 //Filter Posts

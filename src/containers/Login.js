@@ -43,8 +43,6 @@ class Login extends React.Component {
 		e.preventDefault();
 		this.setState({ submittedLogin: true });
         const { username, password } = this.state;
-        console.log(username);
-        console.log(password);
         await this.props.login({username, password});
         if (!this.props.errorMessage){
             this.props.history.push('/');
@@ -70,8 +68,6 @@ class Login extends React.Component {
         this.setState({ submittedRegister: true });
         const { user } = this.state;
         await this.props.register(user); 
-        console.log(this.props);
-        console.log('hello'); 
         if (!this.props.errorMessage) {
             this.props.history.push('/');
         } else {
@@ -81,7 +77,7 @@ class Login extends React.Component {
 
 	render() {
 		// const { loggingIn } = this.props;
-		const { registering  } = this.props;
+		const { registering } = this.props;
 
   		const { username, password, submittedLogin, user, submittedRegister } = this.state;
 
@@ -92,7 +88,7 @@ class Login extends React.Component {
 	  				<form name="login-form" onSubmit={this.handleLoginSubmit}>
 	  					<div className={'form-group' + (submittedLogin && !username ? ' has-error' : '')}>
 	  						<label>
-		                        <input type="text" className="form-control" name="username" placeholder=" " value={username} onChange={this.handleLoginChange} required/>
+		                        <input type="text" className="form-control" name="username" placeholder=" " value={username} onChange={this.handleLoginChange} autocomplete="username" required/>
 		                        {submittedLogin && !username &&
 		                            <div className="help-block">Username is required</div>
 		                        }
@@ -101,7 +97,7 @@ class Login extends React.Component {
 	                    </div>
 	                    <div className={'form-group' + (submittedLogin && !password ? ' has-error' : '')}>
 	                    	<label>                        
-		                        <input type="password" className="form-control" name="password" placeholder=" " value={password} onChange={this.handleLoginChange} required/>
+		                        <input type="password" className="form-control" name="password" placeholder=" " value={password} onChange={this.handleLoginChange} autocomplete="current-password" required/>
 		                        {submittedLogin && !password &&
 		                            <div className="help-block">Password is required</div>
 		                        }
@@ -119,7 +115,7 @@ class Login extends React.Component {
                 	<form name="login-form" onSubmit={this.handleRegisterSubmit}>
                         <div className={'form-group' + (submittedRegister && !user.username ? ' has-error' : '')}>
                             <label>
-                                <input type="text" className="form-control" name="email" placeholder=" " value={user.email} onChange={this.handleRegisterChange} required/>
+                                <input type="text" className="form-control" name="email" placeholder=" " value={user.email} onChange={this.handleRegisterChange} autocomplete="off" required/>
                                 {submittedRegister && !user.username &&
                                     <div className="help-block">Email is required</div>
                                 }
@@ -128,7 +124,7 @@ class Login extends React.Component {
                         </div>
                     	<div className={'form-group' + (submittedRegister && !user.username ? ' has-error' : '')}>
                         	<label>
-                        		<input type="text" className="form-control" name="username" placeholder=" " value={user.username} onChange={this.handleRegisterChange} required/>
+                        		<input type="text" className="form-control" name="username" placeholder=" " value={user.username} onChange={this.handleRegisterChange} autocomplete="off" required/>
                         		{submittedRegister && !user.username &&
                             		<div className="help-block">Username is required</div>
                         		}
@@ -137,7 +133,7 @@ class Login extends React.Component {
                     	</div>
                     	<div className={'form-group' + (submittedRegister && !user.password ? ' has-error' : '')}>
                         	<label>
-                        		<input type="password" className="form-control" name="password" placeholder=" " value={user.password} onChange={this.handleRegisterChange} required/>
+                        		<input type="password" className="form-control" name="password" placeholder=" " value={user.password} onChange={this.handleRegisterChange} autocomplete="new-password" required/>
                         		{submittedRegister && !user.password &&
                             		<div className="help-block">Password is required</div>
                         		}

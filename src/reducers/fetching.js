@@ -4,7 +4,8 @@ import {
   REQUEST_POSTS_FAILED,
   AUTH_REGISTER,
   AUTH_LOGIN,
-  AUTH_ERROR
+  AUTH_ERROR,
+  AUTH_SIGNOUT
 } from '../constants';
 
 export const requestPosts = (state={}, action={}) => {
@@ -30,11 +31,13 @@ export const requestPosts = (state={}, action={}) => {
 export const auth = (state = {}, action={}) => {
   switch (action.type) {
     case AUTH_REGISTER:
-      return Object.assign({}, state, { authenticated: true, errorMessage: '' })
+      return Object.assign({}, state, { user: {}, errorMessage: '' })
     case AUTH_LOGIN: 
-      return Object.assign({}, state, { authenticated: true, errorMessage: '' })
+      return Object.assign({}, state, { user: action.payload.user, errorMessage: '' })
     case AUTH_ERROR:
-      return Object.assign({}, state, { authenticated: false, errorMessage: action.payload })
+      return Object.assign({}, state, { user: {}, errorMessage: action.payload })
+    case AUTH_SIGNOUT:
+      return Object.assign({}, state, { user: {}, errorMessage: ''})
     default: 
       return state
   }
