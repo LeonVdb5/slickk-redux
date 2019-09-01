@@ -1,3 +1,5 @@
+.postlist-main-container{
+}
 
 .filter-container{
 	position: fixed;
@@ -15,7 +17,7 @@
 	height: 100%;
 }
 
-.post-components{
+.post-components{	
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;

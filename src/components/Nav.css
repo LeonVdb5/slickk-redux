@@ -21,9 +21,12 @@
 	text-align: right;
 	width: 33.3vw;
 	height:60px;
+	display:flex;
+    flex-direction:row;
+	justify-content: space-evenly;
 }
 .nav-left-container button {
-	margin-left: 20px;
+	margin-left: 5%;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 40px;
 	line-height: 58px;
@@ -81,4 +84,49 @@
 }
 .search-box:focus{
 	border-bottom: 1px solid #3899ec;
+}
+.dropdown-account{
+	position: relative;
+	display: inline-block;
+	margin-left: 6px;
+}
+.dropdown-account-content{
+	display: none;
+	position: absolute;
+	background-color: white;
+	width: 120px;
+	border: 1px solid lightgrey;
+	z-index: 1;
+	text-align: center;
+}
+.dropdown-account:hover .dropdown-account-content{
+	display: block;
+}
+.dropdown-account:hover .account-icon{
+	opacity: 0.6;
+  	filter:alpha(opacity=60);
+}
+.dropdown-account-content{
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 51.5px;
+}
+.account-icon{
+	width: 32px;
+	height: 32px;
+	margin-top: 14px;
+}
+.dropdown-account button {
+	margin: 0;
+	line-height: 30px;
+	background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 80%;
+	font-weight: bold;
 }
