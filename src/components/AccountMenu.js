@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import userIcon from '../images/user.png';
 import './Nav.css';
 
-class AccountMenu extends Component {
+const AccountMenu = (props) =>  {
   
-  render() {
 
-    let { handleSignout } = this.props;
+
+
 
     return (
       <div className="dropdown-account">
@@ -16,11 +16,11 @@ class AccountMenu extends Component {
         <div className="dropdown-account-content">
           <button>MY PROFILE</button>
           <button>USER SETTINGS</button>
-          <button className="nav-account" onClick={() => handleSignout()}>LOGOUT</button>
+          <button className="nav-account" onClick={() => props.handleSignout()}>LOGOUT</button>
         </div>
       </div>
     );
-  }
+
 }
 
 export default AccountMenu

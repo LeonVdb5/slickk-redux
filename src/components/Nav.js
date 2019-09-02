@@ -19,16 +19,10 @@ const mapStateToProps = (state) => {
 class Nav extends Component {
 	constructor(props) {
     	super(props);
-    	this.handleSignout=this.handleSignout.bind(this);
     }
-
-	handleSignout() {
-		this.props.signout();
-	}
 
 	render () {
 
-		let { user } = this.props;
 
 		return (
 			<div className="nav-main">
@@ -51,8 +45,8 @@ class Nav extends Component {
 							<FilterLink className="nav-products" type='reset'>PRODUCTS</FilterLink>
 						</NavLink>
 					</div>
-					{ !user
-						? <div><AccountMenu handleSignout={this.handleSignout}/></div>
+					{ this.props.user.username 
+						? <div><AccountMenu handleSignout={this.props.signout}/></div>
 						: <div className="nav-right-container-link">
 							<NavLink style={{ textDecoration: 'none', color: 'black' }} to="/login" activeClassName="selectedLink">
 								<button className="nav-login">LOGIN</button>
