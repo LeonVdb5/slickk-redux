@@ -33,7 +33,7 @@ export const auth = (state = {}, action={}) => {
     case AUTH_REGISTER:
       return Object.assign({}, state, { user: {}, errorMessage: '' })
     case AUTH_LOGIN: 
-      return Object.assign({}, state, { user: action.payload.user, errorMessage: '' })
+      return Object.assign({}, state, { user: action.payload, errorMessage: '' })
     case AUTH_ERROR:
       return Object.assign({}, state, { user: {}, errorMessage: action.payload })
     case AUTH_SIGNOUT:

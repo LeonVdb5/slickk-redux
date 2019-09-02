@@ -34,6 +34,7 @@ export const register = (user) => (dispatch) => {
 }
 
 export const login = (formData) => (dispatch) => {
+	console.log('I MADE IT TO LOGIN');
 	return fetch('http://localhost:3000/users/login', {
 		method: 'POST',
 		mode: 'cors',
@@ -43,10 +44,19 @@ export const login = (formData) => (dispatch) => {
 		},
 		body: JSON.stringify(formData),
 	})
-	.then((res) => {
-		console.log(res);
+	.then( async (res) => {
+		
+		let clone = res.clone();
+		let result = await clone.json();
+
+		console.log('ACTION !!!!');
+
+		console.log(result);
+
+		console.log('---------');
+
 		res.status < 400 
-		? dispatch({ type: AUTH_LOGIN, payload: { user: res.json() } })
+		? dispatch({ type: AUTH_LOGIN, payload: result.user })
 		: dispatch({ type: AUTH_ERROR, payload: 'Incorrect username or password' })
 	})
 	.catch(error => { 
@@ -59,7 +69,7 @@ export const login = (formData) => (dispatch) => {
 
 export const signout = () => (dispatch) => {
 	return fetch('http://localhost:3000/users/signout', {
-		method: 'POST',
+		method: 'GET',
 		mode: 'cors',
 		credentials: 'include',
 		headers: {
